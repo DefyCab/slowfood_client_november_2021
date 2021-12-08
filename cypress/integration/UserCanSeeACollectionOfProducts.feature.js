@@ -3,8 +3,8 @@ describe('A user that visits the application', () => {
     cy.intercept(
       'GET',
       '**/api/products',
-      'fixture:products.json', // { fixture: "products.json"}).as()
-    ).as('getProducts')
+      { fixture: "products.json"})
+    .as('getProducts')
     cy.visit('/')
   })
 
