@@ -11,8 +11,9 @@ const App = () => {
   }, [])
 
   const addToOrder = (id) => {
-    debugger
-    // We can now make a POST request to /api/orders
+    Orders.create(id, 99).then(response => {
+      
+    }
   }
 
   const productsList = products.map((product) => {
@@ -33,3 +34,4 @@ const App = () => {
 }
 
 export default App
+    
