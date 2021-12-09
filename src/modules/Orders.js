@@ -1,18 +1,15 @@
-import axios from 'axios'
-const baseUrl = 'http://localhost:3000/api'
-// import { api } from './network'
+import { api } from "./network";
 
-
-const Orders = { 
-  async create(product_id, user_id)  {
-      const { data } = await axios.get("/orders", {
-        params: { product_id: product_id, user_id}
-      }
+const Orders = {
+  async create(product_id, user_id) {
+    const { data } = await api.post("/orders", {
+      params: { product_id: product_id, user_id: user_id },
+    });
+    return data.order;
   },
 
-    async update(order_id, product_id) {
-      debugger
-  }
-}
+  async update(product_id, order_id) {
+  },
+};
 
-export default Orders
+export default Orders;

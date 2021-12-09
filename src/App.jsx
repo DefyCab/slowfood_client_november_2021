@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Products from './modules/Products'
+import Orders from "./modules/Orders"
 
 const App = () => {
   const [products, setProducts] = useState([])
@@ -12,8 +13,8 @@ const App = () => {
 
   const addToOrder = (id) => {
     Orders.create(id, 99).then(response => {
-      
-    }
+     debugger 
+    })
   }
 
   const productsList = products.map((product) => {
