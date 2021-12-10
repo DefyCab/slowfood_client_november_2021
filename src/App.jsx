@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     Products.index().then((data) => {
-      setProducts(data);
+      setProducts(data.products);
     });
   }, []);
 
